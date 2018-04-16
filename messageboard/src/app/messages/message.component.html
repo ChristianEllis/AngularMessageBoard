@@ -1,0 +1,17 @@
+<!-- Attribute Directive
+  <article class="panel panel-default" [ngStyle]="{backgroundColor: color}" (mouseenter)="color = 'green'" (mouseleave)="color = 'red'">
+-->
+<article class="panel panel-default">
+  <div class="panel-body">
+    {{ message.content }}
+  </div>
+  <footer class="panel-footer">
+    <div class="author">
+      {{ message.username }}
+    </div>
+    <div class="config">
+      <a *ngIf = "belongsToUser()" (click)="onEdit()">Edit</a>
+      <a *ngIf = "belongsToUser()" (click)="onDelete()">Delete</a>
+    </div>
+  </footer>
+</article>

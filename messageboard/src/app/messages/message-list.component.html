@@ -1,0 +1,6 @@
+<div class="col-md-8 col-md-offset-2">
+  <!-- Structural Directive (thats what the star means) -->
+  <app-message
+    *ngFor="let message of messages" 
+    [message]="message"></app-message>
+</div>
